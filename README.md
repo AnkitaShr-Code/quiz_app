@@ -16,6 +16,22 @@ npm install
 ## Run the app
 npm start
 
+## Alternate Approach: Using Docker compose
+1. Clone the repository on your local machine:
+   git clone https://github.com/AnkitaShr-Code/quiz_app.git
+
+   cd quiz_app
+2. Use the following command in terminal
+   docker-compose build
+3. Start the service with following command:
+  docker-compose up -d
+
+# Accessing the service
+1. Download the postman collection from quiz_app/postman
+2. Import the downloaded collection in postman
+3. Execute the APIs, you can take help from sample response and request
+
+
 # Future Enhancements
 1. User login setup
 2. User Authorization
@@ -24,6 +40,6 @@ npm start
 5. Create categories for quiz
 6. Assign each quiz a category
 7. Option for user to reattempt a quiz / question
-
+8. Creating a angular APP using material that can use the REST APIs
 
 
