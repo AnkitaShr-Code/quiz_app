@@ -1,0 +1,1619 @@
+{
+	"info": {
+		"_postman_id": "a8b3d69f-4652-4123-958f-b1872e468c75",
+		"name": "Quiz App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38811507"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create Quiz",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"JavaScript Beginner Quiz\",\r\n    \"questions\": [{\r\n        \"text\": \"Among the given statements, which statement defines closures in JavaScript?\",\r\n        \"options\": [{\r\n                \"text\": \"Closure is a function that is enclosed with references to its inner function scope\",\r\n                \"isCorrectAnswer\": false\r\n            }, {\r\n                \"text\": \"Closure is a function that is enclosed with references to its lexical environment\",\r\n                \"isCorrectAnswer\": true\r\n            }, {\r\n                \"text\": \"Closure is a function that is enclosed with references to its lexical environment\",\r\n                \"isCorrectAnswer\": false\r\n            }, {\r\n                \"text\": \"Closure is a function that is enclosed with references to its lexical environment\",\r\n                \"isCorrectAnswer\": false\r\n            }]\r\n\r\n    }, {\r\n        \"text\": \"What will be the output of the following JavaScript statement? \\n var grand_Total=eval(\\\"10*10+5\\\");\",\r\n        \"options\": [{\r\n            \"text\": \"10*10+5\",\r\n            \"isCorrectAnswer\": false\r\n        }, {\r\n            \"text\": \"105 as a string\",\r\n            \"isCorrectAnswer\": false\r\n        }, {\r\n            \"text\": \"105 as an integer value\",\r\n            \"isCorrectAnswer\": true\r\n        }, {\r\n            \"text\": \"Exception is thrown\",\r\n            \"isCorrectAnswer\": false\r\n        }]\r\n    }]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8125/api/quiz",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8125",
+							"path": [
+								"api",
+								"quiz"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create quiz with multiple questions",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"JavaScript Beginner Quiz\",\r\n    \"questions\": [{\r\n        \"text\": \"Among the given statements, which statement defines closures in JavaScript?\",\r\n        \"options\": [{\r\n                \"text\": \"Closure is a function that is enclosed with references to its inner function scope\",\r\n                \"isCorrectAnswer\": false\r\n            }, {\r\n                \"text\": \"Closure is a function that is enclosed with references to its lexical environment\",\r\n                \"isCorrectAnswer\": true\r\n            }, {\r\n                \"text\": \"Closure is a function that is enclosed with references to its lexical environment\",\r\n                \"isCorrectAnswer\": false\r\n            }, {\r\n                \"text\": \"Closure is a function that is enclosed with references to its lexical environment\",\r\n                \"isCorrectAnswer\": false\r\n            }]\r\n\r\n    }, {\r\n        \"text\": \"What will be the output of the following JavaScript statement? \\n var grand_Total=eval(\\\"10*10+5\\\");\",\r\n        \"options\": [{\r\n            \"text\": \"10*10+5\",\r\n            \"isCorrectAnswer\": false\r\n        }, {\r\n            \"text\": \"105 as a string\",\r\n            \"isCorrectAnswer\": false\r\n        }, {\r\n            \"text\": \"105 as an integer value\",\r\n            \"isCorrectAnswer\": true\r\n        }, {\r\n            \"text\": \"Exception is thrown\",\r\n            \"isCorrectAnswer\": false\r\n        }]\r\n    }]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8125/api/quiz",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8125",
+									"path": [
+										"api",
+										"quiz"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "40"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"28-JGEKP3S99YdIsIjbWG/DJK1sy7E\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Oct 2024 17:36:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully created quiz!\"\n}"
+						},
+						{
+							"name": "Missing title",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8125/api/quiz",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8125",
+									"path": [
+										"api",
+										"quiz"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "72"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"48-NKNqjS5iGP69PIJINkIVeUYk/nw\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Oct 2024 16:56:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Missing required parameters!\",\n    \"message\": \"Require quiz title.\"\n}"
+						},
+						{
+							"name": "Missing questions",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"JavaScript Beginner Quiz\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8125/api/quiz",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8125",
+									"path": [
+										"api",
+										"quiz"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "89"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"59-97ABNsLgQbXS7A+iKl+2Z5fDmts\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Oct 2024 16:58:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Missing required parameters!\",\n    \"message\": \"Require atleast 1 question for quiz.\"\n}"
+						},
+						{
+							"name": "Missing atleast 1 question",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"JavaScript Beginner Quiz\",\r\n    \"questions\": []\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8125/api/quiz",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8125",
+									"path": [
+										"api",
+										"quiz"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "89"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"59-97ABNsLgQbXS7A+iKl+2Z5fDmts\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Oct 2024 16:58:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Missing required parameters!\",\n    \"message\": \"Require atleast 1 question for quiz.\"\n}"
+						},
+						{
+							"name": "Missing question text or option not exactly 4 or options not having exactly 1 correct answer",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"JavaScript Beginner Quiz\",\r\n    \"questions\": [{\r\n        \"options\": []\r\n    }]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8125/api/quiz",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8125",
+									"path": [
+										"api",
+										"quiz"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "146"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"92-ddVfmhm5ofdMl1t+zpvgnsrI2V0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Oct 2024 17:05:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Missing required parameters!\",\n    \"message\": \"Require each question to have a text and exactly 4 options, only 1 of the options to be true.\"\n}"
+						},
+						{
+							"name": "Missing Options",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"JavaScript Beginner Quiz\",\r\n    \"questions\": [{\r\n        \"text\": \"Among the given statements, which statement defines closures in JavaScript?\",\r\n        \"options\": []\r\n    }]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8125/api/quiz",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8125",
+									"path": [
+										"api",
+										"quiz"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "146"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"92-ddVfmhm5ofdMl1t+zpvgnsrI2V0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Oct 2024 17:06:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Missing required parameters!\",\n    \"message\": \"Require each question to have a text and exactly 4 options, only 1 of the options to be true.\"\n}"
+						},
+						{
+							"name": "Number of options not equal to 4",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"JavaScript Beginner Quiz\",\r\n    \"questions\": [{\r\n        \"text\": \"Among the given statements, which statement defines closures in JavaScript?\",\r\n        \"options\": [{\r\n                \"text\": \"Closure is a function that is enclosed with references to its inner function scope\",\r\n                \"isCorrectAnswer\": false\r\n            }]\r\n            \r\n    }]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8125/api/quiz",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8125",
+									"path": [
+										"api",
+										"quiz"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "146"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"92-ddVfmhm5ofdMl1t+zpvgnsrI2V0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Oct 2024 17:07:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Missing required parameters!\",\n    \"message\": \"Require each question to have a text and exactly 4 options, only 1 of the options to be true.\"\n}"
+						},
+						{
+							"name": "Multiple options as correct answer",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"JavaScript Beginner Quiz\",\r\n    \"questions\": [{\r\n        \"text\": \"Among the given statements, which statement defines closures in JavaScript?\",\r\n        \"options\": [{\r\n                \"text\": \"Closure is a function that is enclosed with references to its inner function scope\",\r\n                \"isCorrectAnswer\": true\r\n            }, {\r\n                \"text\": \"Closure is a function that is enclosed with references to its lexical environment\",\r\n                \"isCorrectAnswer\": true\r\n            }, {\r\n                \"text\": \"Closure is a function that is enclosed with references to its lexical environment\",\r\n                \"isCorrectAnswer\": false\r\n            }, {\r\n                \"text\": \"Closure is a function that is enclosed with references to its lexical environment\",\r\n                \"isCorrectAnswer\": false\r\n            }]\r\n\r\n    }]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8125/api/quiz",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8125",
+									"path": [
+										"api",
+										"quiz"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "146"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"92-ddVfmhm5ofdMl1t+zpvgnsrI2V0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Oct 2024 17:09:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Missing required parameters!\",\n    \"message\": \"Require each question to have a text and exactly 4 options, only 1 of the options to be true.\"\n}"
+						},
+						{
+							"name": "Succcess scenario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"JavaScript Beginner Quiz\",\r\n    \"questions\": [{\r\n        \"text\": \"Among the given statements, which statement defines closures in JavaScript?\",\r\n        \"options\": [{\r\n                \"text\": \"Closure is a function that is enclosed with references to its inner function scope\",\r\n                \"isCorrectAnswer\": false\r\n            }, {\r\n                \"text\": \"Closure is a function that is enclosed with references to its lexical environment\",\r\n                \"isCorrectAnswer\": true\r\n            }, {\r\n                \"text\": \"Closure is a function that is enclosed with references to its lexical environment\",\r\n                \"isCorrectAnswer\": false\r\n            }, {\r\n                \"text\": \"Closure is a function that is enclosed with references to its lexical environment\",\r\n                \"isCorrectAnswer\": false\r\n            }]\r\n\r\n    }]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8125/api/quiz",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8125",
+									"path": [
+										"api",
+										"quiz"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "40"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"28-JGEKP3S99YdIsIjbWG/DJK1sy7E\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Oct 2024 17:10:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully created quiz!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Quiz Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8125/api/quizzes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8125",
+							"path": [
+								"api",
+								"quizzes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success: Get All Quiz Details",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8125/api/quizzes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8125",
+									"path": [
+										"api",
+										"quizzes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1651"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"673-nucxOpXDEjhwvqBPeBYVLsUcQQM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Oct 2024 17:37:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"List of all available quiz\",\n    \"data\": {\n        \"quizDetails\": [\n            {\n                \"id\": \"6dc5376e-d1c1-4de8-ab4b-a1860fbe0f4a\",\n                \"title\": \"JavaScript Beginner Quiz\",\n                \"questions\": [\n                    {\n                        \"text\": \"Among the given statements, which statement defines closures in JavaScript?\",\n                        \"id\": \"02a5627d-a53e-4de8-8f89-40884c82ac25\",\n                        \"options\": [\n                            {\n                                \"text\": \"Closure is a function that is enclosed with references to its inner function scope\",\n                                \"id\": 1\n                            },\n                            {\n                                \"text\": \"Closure is a function that is enclosed with references to its lexical environment\",\n                                \"id\": 2\n                            },\n                            {\n                                \"text\": \"Closure is a function that is enclosed with references to its lexical environment\",\n                                \"id\": 3\n                            },\n                            {\n                                \"text\": \"Closure is a function that is enclosed with references to its lexical environment\",\n                                \"id\": 4\n                            }\n                        ]\n                    }\n                ]\n            },\n            {\n                \"id\": \"501e69d0-b7fd-4765-9bc1-ea6294531cd4\",\n                \"title\": \"JavaScript Beginner Quiz\",\n                \"questions\": [\n                    {\n                        \"text\": \"Among the given statements, which statement defines closures in JavaScript?\",\n                        \"id\": \"b687ea47-9d75-465b-9172-75f7bd01e0aa\",\n                        \"options\": [\n                            {\n                                \"text\": \"Closure is a function that is enclosed with references to its inner function scope\",\n                                \"id\": 1\n                            },\n                            {\n                                \"text\": \"Closure is a function that is enclosed with references to its lexical environment\",\n                                \"id\": 2\n                            },\n                            {\n                                \"text\": \"Closure is a function that is enclosed with references to its lexical environment\",\n                                \"id\": 3\n                            },\n                            {\n                                \"text\": \"Closure is a function that is enclosed with references to its lexical environment\",\n                                \"id\": 4\n                            }\n                        ]\n                    },\n                    {\n                        \"text\": \"What will be the output of the following JavaScript statement? \\n var grand_Total=eval(\\\"10*10+5\\\");\",\n                        \"id\": \"00c93537-bf28-4269-a15d-7d2a68ce5544\",\n                        \"options\": [\n                            {\n                                \"text\": \"10*10+5\",\n                                \"id\": 1\n                            },\n                            {\n                                \"text\": \"105 as a string\",\n                                \"id\": 2\n                            },\n                            {\n                                \"text\": \"105 as an integer value\",\n                                \"id\": 3\n                            },\n                            {\n                                \"text\": \"Exception is thrown\",\n                                \"id\": 4\n                            }\n                        ]\n                    }\n                ]\n            }\n        ]\n    }\n}"
+						},
+						{
+							"name": "No Quiz in store",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8125/api/quizzes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8125",
+									"path": [
+										"api",
+										"quizzes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "66"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"42-eYuhSv14HFfePrQHXu2zBZKGxM8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Oct 2024 17:12:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"List of all available quiz\",\n    \"data\": {\n        \"quizDetails\": []\n    }\n}"
+						},
+						{
+							"name": "Response when atleast 1 quiz exist",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8125/api/quizzes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8125",
+									"path": [
+										"api",
+										"quizzes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "704"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2c0-oON1WAUsqrFCNKItEYCXQbzFXnU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Oct 2024 17:16:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"List of all available quiz\",\n    \"data\": {\n        \"quizDetails\": [\n            {\n                \"id\": \"6e05ca3f-5d07-4b7b-9785-d2545653422f\",\n                \"title\": \"JavaScript Beginner Quiz\",\n                \"questions\": [\n                    {\n                        \"text\": \"Among the given statements, which statement defines closures in JavaScript?\",\n                        \"id\": \"f5daca95-ba28-42ac-a082-b5366839e2fb\",\n                        \"options\": [\n                            {\n                                \"text\": \"Closure is a function that is enclosed with references to its inner function scope\",\n                                \"id\": 1\n                            },\n                            {\n                                \"text\": \"Closure is a function that is enclosed with references to its lexical environment\",\n                                \"id\": 2\n                            },\n                            {\n                                \"text\": \"Closure is a function that is enclosed with references to its lexical environment\",\n                                \"id\": 3\n                            },\n                            {\n                                \"text\": \"Closure is a function that is enclosed with references to its lexical environment\",\n                                \"id\": 4\n                            }\n                        ]\n                    }\n                ]\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Quiz By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8125/api/quiz/eaf23766-a663-4d35-9f10-c79f4b4e3ef1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8125",
+							"path": [
+								"api",
+								"quiz",
+								"eaf23766-a663-4d35-9f10-c79f4b4e3ef1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Quiz found based on ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8125/api/quiz/6dc5376e-d1c1-4de8-ab4b-a1860fbe0f4a",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8125",
+									"path": [
+										"api",
+										"quiz",
+										"6dc5376e-d1c1-4de8-ab4b-a1860fbe0f4a"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "697"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2b9-hOzNdp8BWeIiUlqo8k0rdY9CpXs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Oct 2024 17:30:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Quiz details found.\",\n    \"data\": {\n        \"quizDetails\": [\n            {\n                \"id\": \"6dc5376e-d1c1-4de8-ab4b-a1860fbe0f4a\",\n                \"title\": \"JavaScript Beginner Quiz\",\n                \"questions\": [\n                    {\n                        \"text\": \"Among the given statements, which statement defines closures in JavaScript?\",\n                        \"id\": \"02a5627d-a53e-4de8-8f89-40884c82ac25\",\n                        \"options\": [\n                            {\n                                \"text\": \"Closure is a function that is enclosed with references to its inner function scope\",\n                                \"id\": 1\n                            },\n                            {\n                                \"text\": \"Closure is a function that is enclosed with references to its lexical environment\",\n                                \"id\": 2\n                            },\n                            {\n                                \"text\": \"Closure is a function that is enclosed with references to its lexical environment\",\n                                \"id\": 3\n                            },\n                            {\n                                \"text\": \"Closure is a function that is enclosed with references to its lexical environment\",\n                                \"id\": 4\n                            }\n                        ]\n                    }\n                ]\n            }\n        ]\n    }\n}"
+						},
+						{
+							"name": "Response when quiz details not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8125/api/quiz/6e05ca3f-5d07-4b7b-9785-d2545653422f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8125",
+									"path": [
+										"api",
+										"quiz",
+										"6e05ca3f-5d07-4b7b-9785-d2545653422f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "65"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"41-ojY+PQjo9Kvfd/BSsM40O/24Hd8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Oct 2024 17:23:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"No associated quiz found!\",\n    \"data\": {\n        \"quizDetails\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Quiz progress for user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8125/api/quiz_progress/userid1/f18c4efe-5208-4aca-b2a8-bb385ba41577",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8125",
+							"path": [
+								"api",
+								"quiz_progress",
+								"userid1",
+								"f18c4efe-5208-4aca-b2a8-bb385ba41577"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User Progress when user has completed quiz",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8125/api/quiz_progress/userid1/f18c4efe-5208-4aca-b2a8-bb385ba41577",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8125",
+									"path": [
+										"api",
+										"quiz_progress",
+										"userid1",
+										"f18c4efe-5208-4aca-b2a8-bb385ba41577"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "134"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"86-+Ulir/e7Yxe02sSFKkufeCFoAJE\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Oct 2024 03:02:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"userID\": \"userid1\",\n    \"quizID\": \"f18c4efe-5208-4aca-b2a8-bb385ba41577\",\n    \"currentQuestion\": 2,\n    \"score\": 1,\n    \"totalQuestions\": 2,\n    \"completed\": true\n}"
+						},
+						{
+							"name": "No progress exists for user and quiz",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8125/api/quiz_progress/userid1/93747056-b82d-4097-858f-367d60d3576b",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8125",
+									"path": [
+										"api",
+										"quiz_progress",
+										"userid1",
+										"93747056-b82d-4097-858f-367d60d3576b"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "77"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4d-Z3oOEyfFJP0rlIdnInmJ0iU5c10\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Oct 2024 20:24:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Progress not found for the selected quiz. Try re-attempting it.\"\n}"
+						},
+						{
+							"name": "User progress when quiz attempted but not completed",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8125/api/quiz_progress/userid1/f18c4efe-5208-4aca-b2a8-bb385ba41577",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8125",
+									"path": [
+										"api",
+										"quiz_progress",
+										"userid1",
+										"f18c4efe-5208-4aca-b2a8-bb385ba41577"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "135"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"87-9wIMdhJObj3I3wCNppRX/66azys\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Oct 2024 02:59:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"userID\": \"userid1\",\n    \"quizID\": \"f18c4efe-5208-4aca-b2a8-bb385ba41577\",\n    \"currentQuestion\": 1,\n    \"score\": 0,\n    \"totalQuestions\": 2,\n    \"completed\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "Start Quiz for user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userID\": \"userid1\",\r\n    \"quizID\": \"f18c4efe-5208-4aca-b2a8-bb385ba41577\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8125/api/start_quiz",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8125",
+							"path": [
+								"api",
+								"start_quiz"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Quiz successfully started for user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userID\": \"userid1\",\r\n    \"quizID\": \"eaf23766-a663-4d35-9f10-c79f4b4e3ef1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8125/api/start_quiz",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8125",
+									"path": [
+										"api",
+										"start_quiz"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "123"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7b-aOQ/Pq81Nw4xcS+Ro1GoHRuqYCo\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Oct 2024 02:20:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Quiz started\",\n    \"progress\": {\n        \"currentQuestion\": 0,\n        \"score\": 0,\n        \"userAnswers\": [],\n        \"totalQuestions\": 2,\n        \"completed\": false\n    }\n}"
+						},
+						{
+							"name": "Invalid User ID or Quiz ID",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userID\": \"userid1\",\r\n    \"quizID\": \"f18c4efe-5208-4aca-b2a8-bb385ba41578\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8125/api/start_quiz",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8125",
+									"path": [
+										"api",
+										"start_quiz"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "40"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"28-SkpeBaAqghuTX4MLKpfDrBEytsw\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Oct 2024 03:20:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Invalid User ID or Quiz ID\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Submit Answer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userID\": \"userid1\",\r\n    \"quizID\": \"f18c4efe-5208-4aca-b2a8-bb385ba41577\",\r\n    \"questionID\": \"85a476da-975b-43d4-9dab-5bd5154576a9\",\r\n    \"selectedAnswerID\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8125/api/submit_answer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8125",
+							"path": [
+								"api",
+								"submit_answer"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User attempted and answer is correct",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userID\": \"userid1\",\r\n    \"quizID\": \"f18c4efe-5208-4aca-b2a8-bb385ba41577\",\r\n    \"questionID\": \"dd95957f-ce6a-40b9-b53c-8121419bd366\",\r\n    \"selectedAnswerID\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8125/api/submit_answer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8125",
+									"path": [
+										"api",
+										"submit_answer"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "492"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1ec-0hDACEYNlwVT4ggFvVb4fFJ1VvQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Oct 2024 03:01:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Correct! Well done!\",\n    \"data\": {\n        \"feedback\": {\n            \"isCorrect\": true,\n            \"score\": 1,\n            \"currentQuestion\": 2,\n            \"remainingQuestions\": 0\n        },\n        \"progress\": {\n            \"currentQuestion\": 2,\n            \"score\": 1,\n            \"userAnswers\": [\n                {\n                    \"questionID\": \"85a476da-975b-43d4-9dab-5bd5154576a9\",\n                    \"isCorrect\": false,\n                    \"answer\": \"Closure is a function that is enclosed with references to its inner function scope\"\n                },\n                {\n                    \"questionID\": \"dd95957f-ce6a-40b9-b53c-8121419bd366\",\n                    \"isCorrect\": true,\n                    \"answer\": \"105 as an integer value\"\n                }\n            ],\n            \"totalQuestions\": 2,\n            \"completed\": true\n        }\n    }\n}"
+						},
+						{
+							"name": "Submit Answer: Missing required request parameters",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8125/api/submit_answer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8125",
+									"path": [
+										"api",
+										"submit_answer"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "387"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"183-IlyhNnC8xzEjTZ3KDhlZIXtW38s\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Oct 2024 02:24:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errors\": [\n        {\n            \"type\": \"field\",\n            \"msg\": \"User ID must be a string\",\n            \"path\": \"userID\",\n            \"location\": \"body\"\n        },\n        {\n            \"type\": \"field\",\n            \"msg\": \"Quiz ID must be a valid UUID\",\n            \"path\": \"quizID\",\n            \"location\": \"body\"\n        },\n        {\n            \"type\": \"field\",\n            \"msg\": \"Question ID must be a valid UUID\",\n            \"path\": \"questionID\",\n            \"location\": \"body\"\n        },\n        {\n            \"type\": \"field\",\n            \"msg\": \"Selected Answer ID must be an integer\",\n            \"path\": \"selectedAnswerID\",\n            \"location\": \"body\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Submit Answer:User has not yet started quiz",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userID\": \"userid1\",\r\n    \"quizID\": \"f18c4efe-5208-4aca-b2a8-bb385ba41577\",\r\n    \"questionID\": \"85a476da-975b-43d4-9dab-5bd5154576a9\",\r\n    \"selectedAnswerID\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8125/api/submit_answer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8125",
+									"path": [
+										"api",
+										"submit_answer"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "50"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"32-0qWU5mlC8S9PdkWgF42+AHDZqrM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Oct 2024 02:29:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User progress not found for the quiz\"\n}"
+						},
+						{
+							"name": "Response when user completed quiz",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userID\": \"userid1\",\r\n    \"quizID\": \"f18c4efe-5208-4aca-b2a8-bb385ba41577\",\r\n    \"questionID\": \"dd95957f-ce6a-40b9-b53c-8121419bd366\",\r\n    \"selectedAnswerID\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8125/api/submit_answer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8125",
+									"path": [
+										"api",
+										"submit_answer"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "492"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1ec-0hDACEYNlwVT4ggFvVb4fFJ1VvQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Oct 2024 03:01:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Correct! Well done!\",\n    \"data\": {\n        \"feedback\": {\n            \"isCorrect\": true,\n            \"score\": 1,\n            \"currentQuestion\": 2,\n            \"remainingQuestions\": 0\n        },\n        \"progress\": {\n            \"currentQuestion\": 2,\n            \"score\": 1,\n            \"userAnswers\": [\n                {\n                    \"questionID\": \"85a476da-975b-43d4-9dab-5bd5154576a9\",\n                    \"isCorrect\": false,\n                    \"answer\": \"Closure is a function that is enclosed with references to its inner function scope\"\n                },\n                {\n                    \"questionID\": \"dd95957f-ce6a-40b9-b53c-8121419bd366\",\n                    \"isCorrect\": true,\n                    \"answer\": \"105 as an integer value\"\n                }\n            ],\n            \"totalQuestions\": 2,\n            \"completed\": true\n        }\n    }\n}"
+						},
+						{
+							"name": "When user attempts same question again",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userID\": \"userid1\",\r\n    \"quizID\": \"f18c4efe-5208-4aca-b2a8-bb385ba41577\",\r\n    \"questionID\": \"dd95957f-ce6a-40b9-b53c-8121419bd366\",\r\n    \"selectedAnswerID\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8125/api/submit_answer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8125",
+									"path": [
+										"api",
+										"submit_answer"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4c-9FX47bs7kyJ/jNCP0xhMCpeEHIs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 06 Oct 2024 03:14:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"You have already attempted this question! Try a different one.\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
