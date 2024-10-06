@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  api:
+    build: ./api  # Build the Dockerfile located in the api folder
+    container_name: quiz_app_api
+    ports:
+      - "8125:8125"  # Map container port 8125 to host port 8125
+    volumes:
+      - ./api:/app  # Mount the app directory for live changes (helpful in development)
+    environment:
+      - NODE_ENV=development  # Set environment variable for development mode
+    command: ["node", "server.js"]  # Command to start the Node.js application (adjust as needed)
