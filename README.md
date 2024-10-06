@@ -22,9 +22,11 @@ npm start
 
    cd quiz_app
 2. Use the following command in terminal
+   
    docker-compose build
-3. Start the service with following command:
-  docker-compose up -d
+4. Start the service with following command:
+
+   docker-compose up -d
 
 # Accessing the service
 1. Download the postman collection from quiz_app/postman
