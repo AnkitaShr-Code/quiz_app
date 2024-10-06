@@ -7,6 +7,7 @@ RESTful APIs for a quiz application that allows users to answer multiple-choice 
 # Getting Started
 ## Clone this repository
 git clone https://github.com/AnkitaShr-Code/quiz_app.git
+
 cd quiz_app
 
 ## Install dependencies
