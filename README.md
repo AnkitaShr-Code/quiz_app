@@ -6,10 +6,13 @@ REST APIs for a quiz application that allows users to answer multiple-choice que
 
 # Getting Started
 ## Clone this repository
+### Pre-requisite :
+   * Node version 18 or more should be installed
+   * NPM should be installed
 ```
 git clone https://github.com/AnkitaShr-Code/quiz_app.git
 
-cd quiz_app
+cd quiz_app/api
 ```
 ## Install dependencies
 ```
@@ -20,6 +23,8 @@ npm install
 npm start
 ```
 ## Alternate Approach: Using Docker compose
+### Pre-requisite
+   * Docker should be available on system
 1. Clone the repository on your local machine:
    ```
    git clone https://github.com/AnkitaShr-Code/quiz_app.git
