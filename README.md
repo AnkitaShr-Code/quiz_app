@@ -6,30 +6,36 @@ REST APIs for a quiz application that allows users to answer multiple-choice que
 
 # Getting Started
 ## Clone this repository
+```
 git clone https://github.com/AnkitaShr-Code/quiz_app.git
 
 cd quiz_app
-
+```
 ## Install dependencies
+```
 npm install
-
+```
 ## Run the app
+```
 npm start
-
+```
 ## Alternate Approach: Using Docker compose
 1. Clone the repository on your local machine:
+   ```
    git clone https://github.com/AnkitaShr-Code/quiz_app.git
 
    cd quiz_app
-2. Use the following command in terminal
-   
+   ```
+3. Use the following command in terminal
+   ```
    docker-compose build
+   ```
 4. Start the service with following command:
-
+```
    docker-compose up -d
-
+```
 # Accessing the service
-1. Download the postman collection from quiz_app/postman
+1. Download the postman collection from ``` quiz_app/postman ```
 2. Import the downloaded collection in postman
 3. Execute the APIs, you can take help from sample response and request
 
